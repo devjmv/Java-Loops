@@ -29,4 +29,26 @@ public class LoopTest {
 
         assertEquals(expectedOutput, actualOutput);
     }
+
+    @Test
+    void testGetListaAnother() {
+        int n = 3;
+        List<String> expectedOutput = new ArrayList<>();
+
+        expectedOutput.add("3 x 1 = 3");
+        expectedOutput.add("3 x 2 = 6");
+        expectedOutput.add("3 x 3 = 9");
+        expectedOutput.add("3 x 4 = 12");
+        expectedOutput.add("3 x 5 = 15");
+        expectedOutput.add("3 x 6 = 18");
+        expectedOutput.add("3 x 7 = 21");
+        expectedOutput.add("3 x 8 = 24");
+        expectedOutput.add("3 x 9 = 27");
+        expectedOutput.add("3 x 10 = 30");
+
+        Loop loop = new Loop(n);
+        List<String> actualOutput = loop.getLista();
+
+        assertEquals(expectedOutput, actualOutput);
+    }
 }
